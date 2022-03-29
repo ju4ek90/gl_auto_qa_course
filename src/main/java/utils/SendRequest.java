@@ -28,6 +28,7 @@ public class SendRequest {
         try {
             Response response = client.newCall(request).execute();
             System.out.println(response.code());
+            System.out.println(response.request().url());
         } catch (IOException e) {
             System.out.println("Error");
         }
