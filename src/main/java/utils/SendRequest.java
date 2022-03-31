@@ -20,13 +20,19 @@ public class SendRequest {
     public static void sendRequestToUrl() {
         HttpUrl url = new HttpUrl.Builder()
                 .scheme("https")
-                .host("google.com")
+                .host("inweb.ua")
+                .addPathSegment("seo")
                 .build();
 
         Request request = buildRequest(url);
 
         try {
             Response response = client.newCall(request).execute();
+            if (response.code() == 301) {
+                System.out.println(response.code());
+                System.out.println("Redirect to " + response.header("location"));
+            }
+
             System.out.println(response.code());
             System.out.println(response.request().url());
         } catch (IOException e) {
