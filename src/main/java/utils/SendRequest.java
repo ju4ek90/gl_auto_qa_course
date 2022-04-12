@@ -50,4 +50,11 @@ public class SendRequest {
                 .url(url)
                 .build();
     }
+
+    public static Request buildRequestWithHeader(HttpUrl url, String headName, String headValue) {
+        return new Request.Builder()
+                .url(url)
+                .addHeader(headName, headValue)
+                .build();
+    }
 }
