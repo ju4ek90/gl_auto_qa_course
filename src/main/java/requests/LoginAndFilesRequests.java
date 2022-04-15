@@ -21,13 +21,13 @@ public class LoginAndFilesRequests {
 
     public static void main(String[] args) {
         sendLoginRequestToUr();
-//        filesRootFolderRequest();
-//        filesSpecificFolderRequest();
-//        filesRootFolderRequest();
-//        filesSpecificFolderRequest();
-//        filesCountRequest();
-//        filesResultsGetRunsRequest();
-//        filesResultsGetAnalysesRequest();
+        filesRootFolderRequest();
+        filesSpecificFolderRequest();
+        filesRootFolderRequest();
+        filesSpecificFolderRequest();
+        filesCountRequest();
+        filesResultsGetRunsRequest();
+        filesResultsGetAnalysesRequest();
         filesResultsGetArtifactsRequest();
     }
 
